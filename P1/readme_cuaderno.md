@@ -67,6 +67,8 @@ https://openai.com/chatgpt/ (Para funciones de búsqueda)
 En esta tarea dividimos la imagen capturada por el video en 2 partes, mientras le aplicamos diferentes efectos de forma diferente, en primer la imagen original se basa en una escala de grises con el método cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY),
 a continuación se le aplica un efecto de cámara térmico que se aplica con el método cv2.applyColorMap con la opción de mapa de colores "cv2.COLORMAP_INFERNO", mientras que para la segunda mitad de la imagen se utiliza una escala de grises en el canal verde, mientras que en los canales rojo y azul se mantienen a cero, obteniendo un efecto de cámara nocturna.
 
+![Prueba de Pop Art](PopArt.PNG)
+
 // Recursos utilizados //
 https://github.com/otsedom/otsedom.github.io
 https://shimat.github.io/opencvsharp_docs/html/6121915d-1174-7345-bdca-789ee1373642.htm
