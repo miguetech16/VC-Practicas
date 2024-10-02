@@ -1,4 +1,4 @@
-## Práctica 2. Funciones básicas de OpenCV.
+# Práctica 2. Funciones básicas de OpenCV.
 
 ### Realizado por:
 
@@ -7,7 +7,7 @@
 
 ## Realización de las Tareas.
 
-# Realiza la cuenta de píxeles blancos por filas, determinando el valor máximo de píxeles blancos para filas, mostrando el número de filas y sus respectivas posiciones, con un número de píxeles blancos mayor o igual que 0.95*maxfil.
+## Realiza la cuenta de píxeles blancos por filas, determinando el valor máximo de píxeles blancos para filas, mostrando el número de filas y sus respectivas posiciones, con un número de píxeles blancos mayor o igual que 0.95*maxfil.
 
 Para esta tarea simplemente se parte del código de ejemplo del propio cuaderno de prácticas donde se cuenta el número de pixeles blancos por columna y se ajusta para hacerlo por filas, para lo cual se modifican algunos de los parámetros como:
 
@@ -25,7 +25,7 @@ A continuación se realiza un simple calculo a partir de la fila con más pixele
 
 Finalmente se imprimen todos los mensajes y se visualiza una gráfica así como la imagen utilizada.
 
-# Aplica umbralizado a la imagen resultante de Sobel (convertida a 8 bits), y posteriormente realiza el conteo por filas y columnas. Calcula el valor máximo de la cuenta por filas y columnas, y determina las filas y columnas por encima del 0.95*máximo. Remarca con alguna primitiva gráfica dichas filas y columnas sobre la imagen. ¿Cómo se comparan los resultados obtenidos a partir de Sobel y Canny?
+## Aplica umbralizado a la imagen resultante de Sobel (convertida a 8 bits), y posteriormente realiza el conteo por filas y columnas. Calcula el valor máximo de la cuenta por filas y columnas, y determina las filas y columnas por encima del 0.95*máximo. Remarca con alguna primitiva gráfica dichas filas y columnas sobre la imagen. ¿Cómo se comparan los resultados obtenidos a partir de Sobel y Canny?
 
 Esta tarea se resuelve apoyandose en la realización de la Tarea 1, así como en ejemplos que han aparecido en el propio cuaderno.
 
@@ -51,7 +51,7 @@ A partir de aquí se recrea la tarea anterior donde por separado se recuentan co
 
 ### Comparación entre Canny y Sobel
 
-# Filas
+### Filas
 
 ![Tarea1_filas](tarea1_filas.png)
 
@@ -59,7 +59,7 @@ A partir de aquí se recrea la tarea anterior donde por separado se recuentan co
 
 En cuanto a las gráficas, muestran resultados que se asimilan, aunque la imagen Canny cuenta con más valores que la imagen sobel, es normal ya que se trata de una imagen umbralizada y es posible que cambiando el umbral tenga más pixeles blancos. 
 
-# Columnas
+### Columnas
 
 ![Tarea1_columnas](tarea1_columnas.png)
 
@@ -67,9 +67,9 @@ En cuanto a las gráficas, muestran resultados que se asimilan, aunque la imagen
 
 En este caso, las gráficas se muestran un poco más diferentes, siguen algo similar pero no son tan similares, además se pueden apreciar picos en las dos imágenes que son diferentes, debido a los distintos efectos por los que han pasado las imágenes.
 
-#  Proponer un demostrador que capture las imágenes de la cámara, y les permita exhibir lo aprendido en estas dos prácticas ante quienes no cursen la asignatura :). Es por ello que además de poder mostrar la imagen original de la webcam, incluya al menos dos usos diferentes de aplicar las funciones de OpenCV trabajadas hasta ahora.
+##  Proponer un demostrador que capture las imágenes de la cámara, y les permita exhibir lo aprendido en estas dos prácticas ante quienes no cursen la asignatura :). Es por ello que además de poder mostrar la imagen original de la webcam, incluya al menos dos usos diferentes de aplicar las funciones de OpenCV trabajadas hasta ahora.
 
-# Reinterpretacion "My little piece of privacy"
+### Reinterpretacion "My little piece of privacy"
 
 Se trata de un demostrador muy inspirado en "My little piece of privacy" donde básicamente se captura el movimiento en video y función de donde se mueva el sujeto una cortina de pixeles translucidos le seguirá con el objetivo de ocultarle algo.
 
@@ -77,7 +77,7 @@ Se trata de un demostrador muy inspirado en "My little piece of privacy" donde b
 
 Realizado por: Andrés Felipe Vargas Cortés
 
-# Party Time
+### Party Time
 
 Un demostrador sencillo pero divertido que funciona a través de la diferencia entre fotogramas es decir a partir del movimiento, a partir de un cierto umbral de movimiento se considerá que el sujeto que se mueve esta bailando y se aplican unos efectos que alteran los colores del video para simular una discoteca.
 
