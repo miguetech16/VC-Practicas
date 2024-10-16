@@ -31,7 +31,7 @@ Si en una imagen es complicado identificar la clase de moneda en video se vuelve
 
 ## clasificación de las distintas partículas en imágenes
 
-Para esta tarea la imagen pasa por diferentes clasificadores, diseñados para reconocer fragmentos, pellet y alquitrán, donde en cada uno se tienen en cuenta características para diferenciar las partículas.
+Para esta tarea hacemos uso de la compacidad para clasificar fragmentos, pellet y alquitrán 
 
 #### Clasificador de Alquitrán:
 
