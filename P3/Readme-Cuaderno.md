@@ -21,7 +21,7 @@ Para el desarrollo de esta primera tarea se hizo uso de la función de Hough par
 
 A continuación se escalan las medidas obtenidas, basandose en las medidas reales del diametro de las monedas. Cuando esto ha sido calculado se devuelve el valor de la moneda, aunque no siempre es exacto ya que la distancia a las monedas en la imagen puede variar.
 
-Todo este procedimiento es activado al hacer click izquierdo sobre la imagen, por cada moneda se obtiene su valor, estos valores son sumados y se devuelve la cantidad de dinero de la imagen.
+Todo este procedimiento es activado al hacer click izquierdo sobre alguna moneda de 1€ que se encuentre en la imagen, a partir del diametro de esta se puede calcular el valor del resto de monedas, estos valores son sumados y se devuelve la cantidad de dinero de la imagen.
 
 ![Resultado_monedas](money_output.png)
 
