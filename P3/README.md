@@ -1,4 +1,4 @@
-# Práctica 2. Funciones básicas de OpenCV.
+# Práctica 3. Detección de Objetos.
 
 ### Realizado por:
 
