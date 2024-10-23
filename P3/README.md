@@ -1,51 +1,50 @@
-## Práctica 3. Detección y reconocimiento de formas
+# Práctica 2. Funciones básicas de OpenCV.
 
-### Contenidos
+### Realizado por:
 
-[Aspectos cubiertos](#31-aspectos-cubiertos)  
-[Entrega](#32-entrega)
+                    - Andrés Felipe Vargas Cortés
+                    - Miguel Ángel Peñate Alemán
 
-### 3.1. Aspectos cubiertos
+## Realización de las Tareas.
+## Determina la cantidad de dinero y monedas presentes en la imagen
 
-En esta práctica el objetivo es adquirir nociones para extraer información geométrica de objetos presentes en una imagen, con el fin de caracterizarlos y posteriormente ser capaz de identificarlos de forma automática en categorías. El cuaderno de la práctica, *VC_P3.ipynb*, contiene diversos ejemplos que permiten la detección de objetos presentes en la imagen, como paso previo a su caracterización geométrica. En este sentido, se plantea el uso del umbralizado y la detección de contornos. Para el caso concreto de monedas, se considera también la utilización de la transformada de Hough para la localización de formas circulares.
+Para el desarrollo de esta primera tarea se hizo uso de la función de Hough para la detección de círculos, a partir de la detección de los circulos se estima el diametro de cada uno a partir del centro del circulo y sus extremos, midiendo en pixeles. Con esta información se clasifican los círculos según el tamaño en diferentes categorías:
 
-Si bien no es necesario instalar paquetes adicionales para las primeras celdas del cuaderno, de cara a poder obtener la matriz de confusión, es requisito instalar en el *environment* el paquete *scikit-learn*. Con *pip* sería algo como:
+        0.01: 16.25, ->  1 céntimo
+        0.02: 18.75, ->  2 céntimos
+        0.05: 21.25, ->  5 céntimos
+        0.1: 19.75,  ->  10 céntimos
+        0.2: 22.25,  ->  20 céntimos
+        0.5: 24.25,  ->  50 céntimos
+        1: 23.25,    ->  1 euro
+        2: 25.75     ->  2 euros
 
-```
-pip install scikit-learn
-```
+A continuación se escalan las medidas obtenidas, basandose en las medidas reales del diametro de las monedas. Cuando esto ha sido calculado se devuelve el valor de la moneda, aunque no siempre es exacto ya que la distancia a las monedas en la imagen puede variar.
 
+Todo este procedimiento es activado al hacer click izquierdo sobre alguna moneda de 1€ que se encuentre en la imagen, a partir del diametro de esta se puede calcular el valor del resto de monedas, estos valores son sumados y se devuelve la cantidad de dinero de la imagen.
 
-### 3.2. Entrega
+![Resultado_monedas](money_output.png)
 
-Para la entrega de esta  práctica, son dos las tareas planteadas. En la primera tarea, se asume que todos los objetos de interés en la imagen son circulares, en concreto monedas de la UE. Tras mostrar diversas aproximaciones para obtener sus contornos, el reto o tarea consiste en determinar la cantidad de dinero y monedas presentes en la imagen.  
+Como extra en esta actividad también se puede encontrar una célula de código que permite detectar estos objetos circulares en tiempo real y dibujar su contorno y centro.
 
-Para la segunda tarea, se proporcionan tres imágenes de tres clases de objetos recogidos en playas canarias: fragmentos plásticos, *pellets* y alquitrán. Las dos primeras categorías se consideran microplásticos cuando miden menos de 5mm, mientras que la tercera es muy habitual encontrarlas en playas canarias. Observar que dado que cada imagen contiene muestras de una única categoría, disponen de un conjunto de datos anotado. La tarea propuesta consiste en tomar como muestras de partida las imágenes proporcionadas, extraer de forma automatizada las partículas e identificar patrones en sus características geométricas y de apariencia que puedan permitir la clasificación de las partículas en dichas imágenes. El resultado obtenido debe mostrarse por medio las métricas mostradas en el cuaderno, incluyendo la matriz de confusión, donde se comparan las anotaciones con las predicciones.
+Si en una imagen es complicado identificar la clase de moneda en video se vuelve un completo desafio, debido a las variaciones de iluminación, distancia variante, calidad de imagen, etc. Por lo que solo se limita a clasificar los objetos circulares en tres categorías según el tamaño.
 
-![Confusión](MatrizConfu.png)  
-*Ejemplo de matriz de confusión*
+## clasificación de las distintas partículas en imágenes
 
-A la hora de considerar posibles características geométricas, como punto de partida para la extracción de descriptores de las partículas, se proporciona enlace al trabajo [SMACC: A System for Microplastics Automatic Counting and Classification](https://doi.org/10.1109/ACCESS.2020.2970498) en el que se adoptan algunas propiedades geométricas para dicho fin. De forma resumida, las características geométricas utilizadas en dicho trabajo fueron:
+Para esta tarea hacemos uso de la compacidad para clasificar fragmentos, pellet y alquitrán 
 
-- Área en píxeles (A)
-- Perímetro en píxeles (P)
-- Compacidad (relación del cuadrado del perímetro con el área C=P^2/A)
-- Relación del área de la partícula con el área del contenedor que la contiene
-- Relación del ancho y el alto del contenedor
-- Relación entre los ejes de la elipse ajustada
-- Definido el centroide, relación entre las distancias menor y mayor al contorno
+#### Clasificador de Alquitrán:
 
-En relación a la segmentación de las partículas, una probable primera observación es que la aplicación del umbralizado para separarlas del fondo, es delicada. Preprocesamiento como suavizar la imagen de entrada o reducir su tamaño, o aplicar heurísticas basadas en el tamaño mínimo y máximo de los contornos localizados, y la distancia mínima entre ellos, pueden ayudar a filtrar falsas detecciones, pero a pesar de ello, será un desafío obtener una separación perfecta para todas las imágenes con la misma estrategia. Añadir, que la imagen de fragmentos contiene unas 80 partículas, la de *pellets* unas 55 y la de alquitrán unas 54.
+A partir de la imagen en escala de grises y la lista de los contornos detectados se hace una búsqueda a partir de un cierto umbral, si el promedio del área del contorno detectato es inferior a este umbral y la compacidad calculada es es inferior o igual 0.8 se clasificará como alquitrán.
 
-![Contornos](Output.jpg)  
-*Ejemplo ilustrativo contornos detectados en la imagen de fragmentos*
+#### Clasificador de Fragmentos:
 
-Si quieren ir más allá, sugerir explorar técnicas de segmentación recientes y potentes como [Segment anything o SAM](https://segment-anything.com) o [OneFormer](https://github.com/SHI-Labs/OneFormer), y extensiones como , [SAM 2](https://github.com/facebookresearch/segment-anything-2), [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) o [Count anything](https://github.com/ylqi/Count-Anything). No duden en compartir otras alternativas que descubran.
+Los fragmentos se caracterizan por tener formas irregulares y colores no demasiado oscuros, por lo que al igual que el clasificador anterior se basa en los contornos detectados y un umbral, donde si el promedio del área del contorno lo superá y la compacidad es inferior al 0.6 será clasificado como un fragmento.
 
-La entrega se realizará a través del campus virtual, remitiendo un enlace a **github**, donde se alojará el **cuaderno o cuadernos** de resolución de las tareas, además de un **README** describiendo el proceso adoptado para resolver cada tarea, integrando de imágenes ilustrativas, además de las métricas obtenidas y matriz de confusión de la segunda tarea.
+#### Clasificador de Pellet:
 
-<!---Momentos en trabajo de Nayar sobre Binary images https://cave.cs.columbia.edu/Statics/monographs/Binary%20Images%20FPCV-1-3.pdf -->
+Una de las principales características que diferencian el Pellet de las otras partículas es su partícular forma circular, por ello se calcula la relación de aspecto del contorno y se comprueba si esta cumple con un umbral, si su compacidad es superior al 0.6 y el promedio del contorno es superior a cierto umbral será clasificado como Pellet.
 
+Para terminar se muestran los resultados obtenidos en una matriz gráfica, donde se puede observar que la diagonal principal obtiene buenos datos, siendo el Alquitrán la particula que mejor encuentra y los fragmentos la que más se confunde.
 
-***
-Bajo licencia de Creative Commons Reconocimiento - No Comercial 4.0 Internacional
+![Resultado](output.png)
