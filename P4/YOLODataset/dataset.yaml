@@ -1,0 +1,7 @@
+path: \\?\C:\Users\varga\Documents\GitHub\VC-Practicas\P4\YOLODataset
+train: train
+val: val
+test: test
+
+names:
+    0: Matricula
