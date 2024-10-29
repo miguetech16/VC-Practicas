@@ -48,7 +48,7 @@ import torch
 print(torch.cuda.is_available())
 ```
 
-##Entrenamiento modelo custom yolov8
+## Entrenamiento modelo custom yolov8
 
 Primero, utilizamos Labelme para generar un conjunto de datos compuesto por imágenes y etiquetas, con el objetivo de entrenar nuestro modelo para el reconocimiento de matrículas. Posteriormente, utilizamos Labelme2YOLO para convertir los datos al formato requerido para entrenar nuestro modelo. Luego, dividimos el conjunto de datos en tres grupos: entrenamiento (train), prueba (test) y validación (val).
 
@@ -72,7 +72,7 @@ results = model.train(data='C:/Users/varga/Documents/GitHub/VC-Practicas/P4/YOLO
 ```
 Una vez completado el entrenamiento, los pesos se almacenan en la carpeta trainX/weights/best.pt, junto con otros datos relacionados con el proceso de entrenamiento.
 
-##Resultados
+## Resultados
 
 1. Vídeo Generado: El prototipo procesa el vídeo y genera un nuevo archivo que visualiza los resultados de la detección y seguimiento. (output_video.mp4)
 2. Archivo CSV: Se genera un archivo CSV que contiene los resultados del procesamiento. 
