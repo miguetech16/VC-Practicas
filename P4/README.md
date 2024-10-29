@@ -9,7 +9,7 @@
 [Entrega](#46-entrega)
 
 <!--[YOLOv7](#52-yolov7)  -->
-### 4.6. Entrega
+## 4.6. Entrega
 
 Para la entrega de esta práctica, la tarea consiste en desarrollar un prototipo que procese uno ([vídeo ejemplo proporcionado](https://alumnosulpgc-my.sharepoint.com/:v:/g/personal/mcastrillon_iusiani_ulpgc_es/EXRsnr4YuQ9CrhcekTPAD8YBMHgn16KwlunFg32iZM0xVQ?e=kzuw4l)) o varios vídeos (incluyendo vídeos de cosecha propia)):
 
@@ -22,7 +22,7 @@ Para la entrega de esta práctica, la tarea consiste en desarrollar un prototipo
 ```
 fotograma, tipo_objeto, confianza, identificador_tracking, x1, y1, x2, y2, matrícula_en_su_caso, confianza, mx1,my1,mx2,my2, texto_matricula
 ```
-### Instalación de CUDA
+## Instalación de CUDA
 En esta tarea, hemos utilizado dos modelos de YOLO11n: el estándar y uno que hemos entrenado nosotros mismos. A continuación, se describe el proceso para entrenar nuestro modelo:
 
 Dado que no es conveniente que el ordenador esté funcionando exclusivamente para este propósito durante varias horas, lo mejor es aprovechar la GPU para llevar a cabo el entrenamiento. Para ello, es necesario instalar CUDA y asegurarnos de que sea compatible con nuestro entorno de Anaconda.
@@ -33,7 +33,7 @@ Para verificar qué versiones son compatibles con nuestro entorno sin necesidad 
 conda search cudatoolkit
 ```
 
-![conda_search](Captura.png)
+![conda_search](images/Captura.png)
 
 Como podemos ver, la versión compatible más alta es la 11.8.0, una vez descargado e instalado, debemos realizar el siguiente comando en el anaconda prompt para instalar pytorch dentro del environment en el que queremos utilizar CUDA
 
@@ -48,7 +48,7 @@ import torch
 print(torch.cuda.is_available())
 ```
 
-###Entrenamiento modelo custom yolov8
+##Entrenamiento modelo custom yolov8
 
 Primero, utilizamos Labelme para generar un conjunto de datos compuesto por imágenes y etiquetas, con el objetivo de entrenar nuestro modelo para el reconocimiento de matrículas. Posteriormente, utilizamos Labelme2YOLO para convertir los datos al formato requerido para entrenar nuestro modelo. Luego, dividimos el conjunto de datos en tres grupos: entrenamiento (train), prueba (test) y validación (val).
 
@@ -72,7 +72,7 @@ results = model.train(data='C:/Users/varga/Documents/GitHub/VC-Practicas/P4/YOLO
 ```
 Una vez completado el entrenamiento, los pesos se almacenan en la carpeta trainX/weights/best.pt, junto con otros datos relacionados con el proceso de entrenamiento.
 
-###Resultados
+##Resultados
 
 1. Vídeo Generado: El prototipo procesa el vídeo y genera un nuevo archivo que visualiza los resultados de la detección y seguimiento. (output_video.mp4)
 2. Archivo CSV: Se genera un archivo CSV que contiene los resultados del procesamiento. 
