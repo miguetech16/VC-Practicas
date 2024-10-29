@@ -33,7 +33,7 @@ Para verificar qué versiones son compatibles con nuestro entorno sin necesidad 
 conda search cudatoolkit
 ```
 
-![conda_search](images/Captura.png)
+![conda_search](images/Captura.PNG)
 
 Como podemos ver, la versión compatible más alta es la 11.8.0, una vez descargado e instalado, debemos realizar el siguiente comando en el anaconda prompt para instalar pytorch dentro del environment en el que queremos utilizar CUDA
 
