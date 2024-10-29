@@ -74,7 +74,7 @@ Una vez completado el entrenamiento, los pesos se almacenan en la carpeta trainX
 
 ## Resultados
 
-1. Vídeo Generado: El prototipo procesa el vídeo y genera un nuevo archivo que visualiza los resultados de la detección y seguimiento. ([Output_video](https://alumnosulpgc-my.sharepoint.com/:v:/g/personal/andres_vargas101_alu_ulpgc_es/EeN5o8JAXsRDqSoYaXyiZGwBfI_p6HoYQaGhnkW9w8mkfg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=6eGLce))
+1. Vídeo Generado: El prototipo procesa el vídeo y genera un nuevo archivo que visualiza los resultados de la detección y seguimiento. ([Output_video](https://alumnosulpgc-my.sharepoint.com/:v:/g/personal/andres_vargas101_alu_ulpgc_es/EaU-oF_DWl1BjmiZKhIZ3ZIBnx9kKMWb5SCxO1gRpSJ7Dg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=HH4XAc))
 2. Archivo CSV: Se genera un archivo CSV que contiene los resultados del procesamiento. 
 ***
 Bajo licencia de Creative Commons Reconocimiento - No Comercial 4.0 Internacional
