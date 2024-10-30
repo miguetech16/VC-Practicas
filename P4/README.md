@@ -4,7 +4,7 @@
                     - Andrés Felipe Vargas Cortés
                     - Miguel Ángel Peñate Alemán
 
-### Contenidos 
+## Contenidos 
 
 ## Descripción de la Práctica 
 
@@ -185,7 +185,6 @@ Objetivos Requeridos Cumplidos:
 
 - detecte y siga las personas y vehículos presentes
 - detecte y lea las matrículas de los vehículos presentes
-- cuente el total de cada clase
 - vuelque a disco un vídeo que visualice los resultados
 - genere un archivo csv con el resultado de la detección y seguimiento
 
