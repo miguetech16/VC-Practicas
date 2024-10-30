@@ -6,13 +6,6 @@
 
 ### Contenidos 
 
-[Descripción](#descripcion-de-la-practica)  
-[Desarrollo](#desarrollo-de-la-practica)  
-[OCRs](#43-ocrs)  
-[Detectando](#44-detectando-desde-muestro-codigo)  
-[Entrenando YOLO](#45-entrenando-yolo)  
-[Entrega](#46-entrega)
-
 ## Descripción de la Práctica 
 
 El objetivo de esta práctica, consiste en desarrollar un prototipo que procese un ([vídeo de ejemplo proporcionado](https://alumnosulpgc-my.sharepoint.com/:v:/g/personal/mcastrillon_iusiani_ulpgc_es/EXRsnr4YuQ9CrhcekTPAD8YBMHgn16KwlunFg32iZM0xVQ?e=kzuw4l)) o varios vídeos (incluyendo vídeos de cosecha propia), en los que se recoja cierta información sobre lo que ocurre, haciendo un seguimiento fotograma a fotograma y cumpla con los siguientes objetivos:
@@ -172,10 +165,10 @@ En este apartado se muestran los resultados obtenidos:
 
 #### Vídeo Generado 1 (Demo cuaderno):  
 
- [Video_profe](https://alumnosulpgc-my.sharepoint.com/:v:/g/personal/andres_vargas101_alu_ulpgc_es/EVRNr1zRNXxGp-j5GjCCnlMBVjz2_UT28lowG5pjy3pDKw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=OeIrOn)
+ [Video_cuaderno](https://alumnosulpgc-my.sharepoint.com/:v:/g/personal/andres_vargas101_alu_ulpgc_es/EVRNr1zRNXxGp-j5GjCCnlMBVjz2_UT28lowG5pjy3pDKw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=OeIrOn)
 
 
- ![Video_profe](/P4/images/Video1.gif)
+ ![Video_cuaderno](/P4/images/Video1.gif)
 
 
 #### Vídeo Generado 2 (Video propio): 
