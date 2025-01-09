@@ -25,7 +25,7 @@ A continuación se muestran algunos ejemplos visuales de forma demostrativa de l
 
 - Gif
 
-![dance_without_skeleton_gif](play_example/dance__without_skeleton.gif)
+![dance_without_skeleton_gif](play_example/dance_without_skeleton.gif)
 
 ### Puntuación Final 
 
